@@ -1,0 +1,210 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  color: #555;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 100px;
+}
+
+h1 {
+  padding: 50px;
+}
+
+.wrapper {
+  text-align: center;
+  vertical-align: middle;
+  margin-bottom: 100px;
+  background-color: white;
+  padding-bottom: 100px;
+  box-shadow: 0px 40px 60px -20px rgba(0, 0, 0, 0.2);
+}
+
+.loader {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  border: 8px solid #555;
+  border-radius: 50%;
+  margin: 50px;
+  position: relative;
+}
+
+.loader::after {
+  content: "";
+  display: block;
+  width: 204px;
+  height: 204px;
+  border: 12px solid transparent;
+  box-sizing: border-box;
+  border-top-color: #ccde35;
+  border-bottom-color: #ccde35;
+  border-radius: 50%;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  -webkit-animation: 2s spin cubic-bezier(0.155, 1.105, 0.295, 1.12) infinite;
+          animation: 2s spin cubic-bezier(0.155, 1.105, 0.295, 1.12) infinite;
+}
+
+.hexagon {
+  position: absolute;
+  width: 40px;
+  height: 23.09px;
+  background-color: #768400;
+}
+
+.hexagon::before, .hexagon::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+}
+
+.hexagon::before {
+  left: 0;
+  bottom: 100%;
+  border-bottom: 11.55px solid #768400;
+}
+
+.hexagon::after {
+  left: 0;
+  top: 100%;
+  border-top: 11.55px solid #768400;
+}
+
+.hexagon.hex_1 {
+  top: 40px;
+  left: 47px;
+  -webkit-animation: animateHexagon 2s ease-in-out infinite;
+          animation: animateHexagon 2s ease-in-out infinite;
+  -webkit-animation-delay: 0.14286s;
+          animation-delay: 0.14286s;
+}
+
+.hexagon.hex_2 {
+  top: 40px;
+  left: 97px;
+  -webkit-animation: animateHexagon 2s ease-in-out infinite;
+          animation: animateHexagon 2s ease-in-out infinite;
+  -webkit-animation-delay: 0.28571s;
+          animation-delay: 0.28571s;
+}
+
+.hexagon.hex_3 {
+  top: 78px;
+  left: 22px;
+  -webkit-animation: animateHexagon 2s ease-in-out infinite;
+          animation: animateHexagon 2s ease-in-out infinite;
+  -webkit-animation-delay: 0.42857s;
+          animation-delay: 0.42857s;
+}
+
+.hexagon.hex_4 {
+  top: 78px;
+  left: 72px;
+  -webkit-animation: animateHexagon 2s ease-in-out infinite;
+          animation: animateHexagon 2s ease-in-out infinite;
+  -webkit-animation-delay: 0.57143s;
+          animation-delay: 0.57143s;
+}
+
+.hexagon.hex_5 {
+  top: 78px;
+  left: 122px;
+  -webkit-animation: animateHexagon 2s ease-in-out infinite;
+          animation: animateHexagon 2s ease-in-out infinite;
+  -webkit-animation-delay: 0.71429s;
+          animation-delay: 0.71429s;
+}
+
+.hexagon.hex_6 {
+  top: 117px;
+  left: 47px;
+  -webkit-animation: animateHexagon 2s ease-in-out infinite;
+          animation: animateHexagon 2s ease-in-out infinite;
+  -webkit-animation-delay: 0.85714s;
+          animation-delay: 0.85714s;
+}
+
+.hexagon.hex_7 {
+  top: 117px;
+  left: 97px;
+  -webkit-animation: animateHexagon 2s ease-in-out infinite;
+          animation: animateHexagon 2s ease-in-out infinite;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+@-webkit-keyframes animateHexagon {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  15%, 50% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    opacity: 0;
+  }
+  65% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes animateHexagon {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  15%, 50% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    opacity: 0;
+  }
+  65% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg) scale(1);
+            transform: rotate(0deg) scale(1);
+  }
+  50% {
+    -webkit-transform: rotate(45deg) scale(1.2);
+            transform: rotate(45deg) scale(1.2);
+  }
+  100% {
+    -webkit-transform: rotate(360deg) scale(1);
+            transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg) scale(1);
+            transform: rotate(0deg) scale(1);
+  }
+  50% {
+    -webkit-transform: rotate(45deg) scale(1.2);
+            transform: rotate(45deg) scale(1.2);
+  }
+  100% {
+    -webkit-transform: rotate(360deg) scale(1);
+            transform: rotate(360deg) scale(1);
+  }
+}
